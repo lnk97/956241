@@ -1,0 +1,173 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>궁성 숙위 체계 온톨로지 관계망</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f6fb;color:#172033;font-family:Arial,"Malgun Gothic",sans-serif}
+header{background:#101b32;color:white;padding:20px 26px}h1{font-size:21px;margin:0 0 5px}header p{margin:0;color:#c4d0e2;font-size:13px}
+main{max-width:1450px;margin:18px auto;padding:0 16px;display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:14px}
+.panel{background:white;border:1px solid #dce4ef;border-radius:13px;overflow:hidden}
+.toolbar{padding:13px 16px;border-bottom:1px solid #e2e8f0;display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+button{border:1px solid #cbd5e1;background:white;padding:7px 10px;border-radius:7px;cursor:pointer;font-size:12px}button:hover{background:#eff6ff}
+svg{width:100%;height:auto;min-width:850px;display:block;touch-action:none;cursor:grab;background-color:#fbfdff;background-image:radial-gradient(#dce4ef 1px,transparent 1px);background-size:20px 20px}
+.scroller{overflow:auto}.edge{stroke:#91a0b4;stroke-width:1.8}.edge-label{font-size:11px;fill:#475569;text-anchor:middle;paint-order:stroke;stroke:white;stroke-width:4px;stroke-linejoin:round}
+.bubble{stroke:white;stroke-width:3;filter:drop-shadow(0 2px 2px #0002)}.nodeg{cursor:grab;}cursor:pointer}.nodeg:hover .bubble,.nodeg:focus .bubble{stroke:#111827;stroke-width:4}
+.nlabel{font-size:12px;text-anchor:middle;font-weight:bold;fill:#172033;pointer-events:none}.nsub{font-size:10px;text-anchor:middle;fill:#64748b;pointer-events:none}
+aside{padding:16px}aside h2{font-size:15px;margin:0 0 12px}#info{font-size:13px;line-height:1.8;color:#475569;background:#f8fafc;padding:12px;border-radius:9px;min-height:90px}
+.legend{padding:12px 16px;display:flex;gap:13px;flex-wrap:wrap;font-size:11px;color:#475569;border-top:1px solid #e2e8f0}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+.note{font-size:12px;color:#64748b;line-height:1.7;padding:14px 16px}
+@media(max-width:900px){main{grid-template-columns:1fr}}
+</style></head><body>
+<header><h1>궁성 숙위 체계 · 온톨로지 관계망</h1><p>사료에 나타난 인물 · 관직 · 방위 · 군사 활동 · 행정기관의 연결 구조</p></header>
+<main><section class="panel"><div class="toolbar"><b style="font-size:13px;margin-right:6px">노드 유형 필터</b>
+<button onclick="filter('all')">전체</button><button onclick="filter('person')">인물</button><button onclick="filter('office')">기관</button><button onclick="filter('place')">방위·장소</button><button onclick="filter('military')">군사·활동</button></div>
+<div class="scroller"><svg viewBox="0 0 1100 640" xmlns="http://www.w3.org/2000/svg" aria-label="궁성 숙위 체계 관계망">
+<defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0 0 L0 6 L7 3z" fill="#91a0b4"/></marker></defs>
+<g id="viewport"><g id="edges"><line x1="188.3" y1="130.1" x2="317.7" y2="99.9" class="edge" marker-end="url(#arr)" data-source="p1" data-target="t1"/><text x="253.0" y="110.0" class="edge-label" data-source="p1" data-target="t1">임명됨</text><line x1="188.5" y1="295.7" x2="317.6" y2="269.3" class="edge" marker-end="url(#arr)" data-source="p2" data-target="t2"/><text x="253.0" y="277.5" class="edge-label" data-source="p2" data-target="t2">임명됨</text><line x1="911.7" y1="130.1" x2="782.3" y2="99.9" class="edge" marker-end="url(#arr)" data-source="p3" data-target="t3"/><text x="847.0" y="110.0" class="edge-label" data-source="p3" data-target="t3">임명됨</text><line x1="911.5" y1="295.7" x2="782.4" y2="269.3" class="edge" marker-end="url(#arr)" data-source="p4" data-target="t4"/><text x="847.0" y="277.5" class="edge-label" data-source="p4" data-target="t4">임명됨</text><line x1="355.0" y1="120.0" x2="355.0" y2="150.0" class="edge" marker-end="url(#arr)" data-source="t1" data-target="l1"/><text x="355.0" y="130.0" class="edge-label" data-source="t1" data-target="l1">담당</text><line x1="355.0" y1="290.0" x2="355.0" y2="320.0" class="edge" marker-end="url(#arr)" data-source="t2" data-target="l2"/><text x="355.0" y="300.0" class="edge-label" data-source="t2" data-target="l2">담당</text><line x1="745.0" y1="120.0" x2="745.0" y2="150.0" class="edge" marker-end="url(#arr)" data-source="t3" data-target="l3"/><text x="745.0" y="130.0" class="edge-label" data-source="t3" data-target="l3">담당</text><line x1="745.0" y1="290.0" x2="745.0" y2="320.0" class="edge" marker-end="url(#arr)" data-source="t4" data-target="l4"/><text x="745.0" y="300.0" class="edge-label" data-source="t4" data-target="l4">담당</text><line x1="380.3" y1="111.7" x2="521.7" y2="253.3" class="edge" marker-end="url(#arr)" data-source="t1" data-target="m1"/><text x="451.0" y="177.5" class="edge-label" data-source="t1" data-target="m1">군사 지휘</text><line x1="389.0" y1="265.6" x2="512.0" y2="269.4" class="edge" marker-end="url(#arr)" data-source="t2" data-target="m1"/><text x="450.5" y="262.5" class="edge-label" data-source="t2" data-target="m1">군사 지휘</text><line x1="719.7" y1="111.7" x2="578.3" y2="253.3" class="edge" marker-end="url(#arr)" data-source="t3" data-target="m1"/><text x="649.0" y="177.5" class="edge-label" data-source="t3" data-target="m1">군사 지휘</text><line x1="711.0" y1="265.6" x2="588.0" y2="269.4" class="edge" marker-end="url(#arr)" data-source="t4" data-target="m1"/><text x="649.5" y="262.5" class="edge-label" data-source="t4" data-target="m1">군사 지휘</text><line x1="534.1" y1="292.1" x2="477.8" y2="417.9" class="edge" marker-end="url(#arr)" data-source="m1" data-target="a1"/><text x="505.9" y="350.0" class="edge-label" data-source="m1" data-target="a1">수행</text><line x1="565.9" y1="292.1" x2="622.2" y2="417.9" class="edge" marker-end="url(#arr)" data-source="m1" data-target="a2"/><text x="594.1" y="350.0" class="edge-label" data-source="m1" data-target="a2">수행</text><line x1="481.5" y1="459.3" x2="525.9" y2="530.7" class="edge" marker-end="url(#arr)" data-source="a1" data-target="pal"/><text x="503.7" y="490.0" class="edge-label" data-source="a1" data-target="pal">대상</text><line x1="618.5" y1="459.3" x2="574.1" y2="530.7" class="edge" marker-end="url(#arr)" data-source="a2" data-target="pal"/><text x="596.3" y="490.0" class="edge-label" data-source="a2" data-target="pal">대상</text><line x1="189.0" y1="550.0" x2="907.0" y2="550.0" class="edge" marker-end="url(#arr)" data-source="o1" data-target="loc"/><text x="548.0" y="545.0" class="edge-label" data-source="o1" data-target="loc">숙직</text><line x1="389.0" y1="550.0" x2="907.0" y2="550.0" class="edge" marker-end="url(#arr)" data-source="o2" data-target="loc"/><text x="648.0" y="545.0" class="edge-label" data-source="o2" data-target="loc">숙직</text><line x1="779.0" y1="550.0" x2="907.0" y2="550.0" class="edge" marker-end="url(#arr)" data-source="o3" data-target="loc"/><text x="843.0" y="545.0" class="edge-label" data-source="o3" data-target="loc">숙직</text></g><g id="nodes"><g class="nodeg" data-type="person" tabindex="0" role="button" aria-label="윤암(尹巖)">
+      <circle cx="155" cy="135" r="27" fill="#3478e5" class="bubble"/>
+      <text x="155" y="179" class="nlabel">윤암(尹巖)</text>
+      <text x="155" y="194" class="nsub">파평위 · 남면 절제사</text>
+    </g><g class="nodeg" data-type="person" tabindex="0" role="button" aria-label="이완(李梡)">
+      <circle cx="155" cy="300" r="27" fill="#3478e5" class="bubble"/>
+      <text x="155" y="344" class="nlabel">이완(李梡)</text>
+      <text x="155" y="359" class="nsub">전의위 · 서면 절제사</text>
+    </g><g class="nodeg" data-type="person" tabindex="0" role="button" aria-label="이영(李齡)">
+      <circle cx="945" cy="135" r="27" fill="#3478e5" class="bubble"/>
+      <text x="945" y="179" class="nlabel">이영(李齡)</text>
+      <text x="945" y="194" class="nsub">첨지중추원사 · 북면 절제사</text>
+    </g><g class="nodeg" data-type="person" tabindex="0" role="button" aria-label="최숙손(崔淑孫)">
+      <circle cx="945" cy="300" r="27" fill="#3478e5" class="bubble"/>
+      <text x="945" y="344" class="nlabel">최숙손(崔淑孫)</text>
+      <text x="945" y="359" class="nsub">중추원 부사 · 동면 절제사</text>
+    </g><g class="nodeg" data-type="title" tabindex="0" role="button" aria-label="남면 절제사">
+      <circle cx="355" cy="95" r="27" fill="#0f9ca8" class="bubble"/>
+      <text x="355" y="139" class="nlabel">남면 절제사</text>
+      <text x="355" y="154" class="nsub">남쪽 방어 지휘</text>
+    </g><g class="nodeg" data-type="title" tabindex="0" role="button" aria-label="서면 절제사">
+      <circle cx="355" cy="265" r="27" fill="#0f9ca8" class="bubble"/>
+      <text x="355" y="309" class="nlabel">서면 절제사</text>
+      <text x="355" y="324" class="nsub">서쪽 방어 지휘</text>
+    </g><g class="nodeg" data-type="title" tabindex="0" role="button" aria-label="북면 절제사">
+      <circle cx="745" cy="95" r="27" fill="#0f9ca8" class="bubble"/>
+      <text x="745" y="139" class="nlabel">북면 절제사</text>
+      <text x="745" y="154" class="nsub">북쪽 방어 지휘</text>
+    </g><g class="nodeg" data-type="title" tabindex="0" role="button" aria-label="동면 절제사">
+      <circle cx="745" cy="265" r="27" fill="#0f9ca8" class="bubble"/>
+      <text x="745" y="309" class="nlabel">동면 절제사</text>
+      <text x="745" y="324" class="nsub">동쪽 방어 지휘</text>
+    </g><g class="nodeg" data-type="place" tabindex="0" role="button" aria-label="남면(南面)">
+      <circle cx="355" cy="175" r="27" fill="#f3a51b" class="bubble"/>
+      <text x="355" y="219" class="nlabel">남면(南面)</text>
+      <text x="355" y="234" class="nsub">궁성 남쪽 구역</text>
+    </g><g class="nodeg" data-type="place" tabindex="0" role="button" aria-label="서면(西面)">
+      <circle cx="355" cy="345" r="27" fill="#f3a51b" class="bubble"/>
+      <text x="355" y="389" class="nlabel">서면(西面)</text>
+      <text x="355" y="404" class="nsub">궁성 서쪽 구역</text>
+    </g><g class="nodeg" data-type="place" tabindex="0" role="button" aria-label="북면(北面)">
+      <circle cx="745" cy="175" r="27" fill="#f3a51b" class="bubble"/>
+      <text x="745" y="219" class="nlabel">북면(北面)</text>
+      <text x="745" y="234" class="nsub">궁성 북쪽 구역</text>
+    </g><g class="nodeg" data-type="place" tabindex="0" role="button" aria-label="동면(東面)">
+      <circle cx="745" cy="345" r="27" fill="#f3a51b" class="bubble"/>
+      <text x="745" y="389" class="nlabel">동면(東面)</text>
+      <text x="745" y="404" class="nsub">궁성 동쪽 구역</text>
+    </g><g class="nodeg" data-type="military" tabindex="0" role="button" aria-label="통속 군사">
+      <circle cx="550" cy="270" r="27" fill="#e94b55" class="bubble"/>
+      <text x="550" y="314" class="nlabel">통속 군사</text>
+      <text x="550" y="329" class="nsub">각 절제사가 거느린 군사</text>
+    </g><g class="nodeg" data-type="action" tabindex="0" role="button" aria-label="숙위(宿衛)">
+      <circle cx="460" cy="440" r="27" fill="#8b5cf6" class="bubble"/>
+      <text x="460" y="484" class="nlabel">숙위(宿衛)</text>
+      <text x="460" y="499" class="nsub">궁성 경계</text>
+    </g><g class="nodeg" data-type="action" tabindex="0" role="button" aria-label="순찰(巡)">
+      <circle cx="640" cy="440" r="27" fill="#8b5cf6" class="bubble"/>
+      <text x="640" y="484" class="nlabel">순찰(巡)</text>
+      <text x="640" y="499" class="nsub">순을 돌다</text>
+    </g><g class="nodeg" data-type="place" tabindex="0" role="button" aria-label="궁성(宮城)">
+      <circle cx="550" cy="550" r="27" fill="#f3a51b" class="bubble"/>
+      <text x="550" y="594" class="nlabel">궁성(宮城)</text>
+      <text x="550" y="609" class="nsub">경비 대상 공간</text>
+    </g><g class="nodeg" data-type="office" tabindex="0" role="button" aria-label="의정부">
+      <circle cx="155" cy="550" r="27" fill="#12a879" class="bubble"/>
+      <text x="155" y="594" class="nlabel">의정부</text>
+      <text x="155" y="609" class="nsub">궐내 숙직</text>
+    </g><g class="nodeg" data-type="office" tabindex="0" role="button" aria-label="승정원">
+      <circle cx="355" cy="550" r="27" fill="#12a879" class="bubble"/>
+      <text x="355" y="594" class="nlabel">승정원</text>
+      <text x="355" y="609" class="nsub">모여 숙직</text>
+    </g><g class="nodeg" data-type="office" tabindex="0" role="button" aria-label="집현전">
+      <circle cx="745" cy="550" r="27" fill="#12a879" class="bubble"/>
+      <text x="745" y="594" class="nlabel">집현전</text>
+      <text x="745" y="609" class="nsub">모여 숙직</text>
+    </g><g class="nodeg" data-type="place" tabindex="0" role="button" aria-label="궐내(闕內)">
+      <circle cx="945" cy="550" r="27" fill="#f3a51b" class="bubble"/>
+      <text x="945" y="594" class="nlabel">궐내(闕內)</text>
+      <text x="945" y="609" class="nsub">숙직 장소</text>
+    </g></g></g></svg></div>
+<div class="legend"><span><i class="dot" style="background:#3478e5"></i>인물</span><span><i class="dot" style="background:#0f9ca8"></i>관직</span><span><i class="dot" style="background:#f3a51b"></i>방위·장소</span><span><i class="dot" style="background:#e94b55"></i>군사</span><span><i class="dot" style="background:#8b5cf6"></i>활동</span><span><i class="dot" style="background:#12a879"></i>기관</span></div>
+<div class="note">원형 노드를 마우스로 누른 채 끌면 해당 노드가 이동하고, 연결된 선과 관계 이름도 함께 따라옵니다. 노드를 클릭하면 오른쪽에 속성이 표시됩니다. 화면이 좁으면 그래프 영역을 좌우로 스크롤하세요.</div></section>
+<aside class="panel"><h2>노드 상세 정보</h2><div id="info">그래프의 원형 노드를 클릭해 주세요. 인물의 기존 지위와 임명된 직책, 기관의 숙직 활동 등을 확인할 수 있습니다.</div><h2 style="margin-top:20px">온톨로지 구성</h2><div id="info"><b>클래스</b><br>인물 · 관직 · 기관 · 장소 · 군사조직 · 활동<br><br><b>관계</b><br>임명됨 · 담당 · 군사 지휘 · 수행 · 숙직<br><br><b>데이터 속성</b><br>이름 · 한자명 · 기존 지위 · 담당 방위 · 사료상 역할</div></aside></main>
+<script>
+const D={"p1": {"name": "윤암(尹巖)", "type": "person", "description": "파평위 / 남면 절제사 / 남면 담당"}, "p2": {"name": "이완(李梡)", "type": "person", "description": "전의위 / 서면 절제사 / 서면 담당"}, "p3": {"name": "이영(李齡)", "type": "person", "description": "첨지중추원사 / 북면 절제사 / 북면 담당"}, "p4": {"name": "최숙손(崔淑孫)", "type": "person", "description": "중추원 부사 / 동면 절제사 / 동면 담당"}, "t1": {"name": "남면 절제사", "type": "title", "description": "관직 / 궁성 남면 담당"}, "t2": {"name": "서면 절제사", "type": "title", "description": "관직 / 궁성 서면 담당"}, "t3": {"name": "북면 절제사", "type": "title", "description": "관직 / 궁성 북면 담당"}, "t4": {"name": "동면 절제사", "type": "title", "description": "관직 / 궁성 동면 담당"}, "l1": {"name": "남면(南面)", "type": "place", "description": "방위 / 궁성의 남쪽"}, "l2": {"name": "서면(西面)", "type": "place", "description": "방위 / 궁성의 서쪽"}, "l3": {"name": "북면(北面)", "type": "place", "description": "방위 / 궁성의 북쪽"}, "l4": {"name": "동면(東面)", "type": "place", "description": "방위 / 궁성의 동쪽"}, "m1": {"name": "통속 군사", "type": "military", "description": "군사 조직 / 각 절제사의 지휘 대상"}, "a1": {"name": "숙위(宿衛)", "type": "action", "description": "군사 활동 / 궁성을 지키는 활동"}, "a2": {"name": "순찰(巡)", "type": "action", "description": "군사 활동 / 순찰 활동"}, "pal": {"name": "궁성(宮城)", "type": "place", "description": "장소 / 숙위 및 순찰의 대상"}, "o1": {"name": "의정부", "type": "office", "description": "행정기관 / 이 밤 궐내 숙직"}, "o2": {"name": "승정원", "type": "office", "description": "행정기관 / 이 밤 모여 숙직"}, "o3": {"name": "집현전", "type": "office", "description": "기관 / 이 밤 모여 숙직"}, "loc": {"name": "궐내(闕內)", "type": "place", "description": "장소 / 궁궐 내부"}};
+function showInfo(id){const d=D[id];document.getElementById('info').innerHTML='<b style="font-size:16px;color:#172033">'+d.name+'</b><br><span style="color:#64748b">유형: '+d.type+'</span><hr style="border:0;border-top:1px solid #e2e8f0"><b>속성 및 사료상 역할</b><br>'+d.description;}
+function filter(t){document.querySelectorAll('.nodeg').forEach(el=>{const ty=el.dataset.type;let ok=t==='all'||ty===t||(t==='place'&&ty==='place')||(t==='military'&&(ty==='military'||ty==='action'));el.style.opacity=ok?'1':'.12';});}
+
+const svgEl=document.querySelector('svg');
+const nodeEls=[...document.querySelectorAll('.nodeg')];
+let active=null, moved=false, start={x:0,y:0}, origin={x:0,y:0};
+function centerOf(id){
+ const g=nodeEls.find(n=>n.dataset.nodeId===id);
+ const c=g.querySelector('circle');
+ const x=Number(c.getAttribute('cx')), y=Number(c.getAttribute('cy'));
+ const tr=g.getAttribute('transform')||'';
+ const mt=tr.match(/translate\(([-\d.]+)[ ,]([-\d.]+)\)/);
+ return {x:x+(mt?Number(mt[1]):0),y:y+(mt?Number(mt[2]):0)};
+}
+nodeEls.forEach((g,i)=>{
+ const c=g.querySelector('circle');
+ const id=Object.keys(D)[i];
+ g.dataset.nodeId=id;
+ g.style.touchAction='none';
+ g.addEventListener('pointerdown',ev=>{
+   if(ev.button!==0 && ev.pointerType==='mouse') return;
+   ev.preventDefault(); ev.stopPropagation();
+   active=g; moved=false;
+   const pt=svgEl.createSVGPoint(); pt.x=ev.clientX; pt.y=ev.clientY;
+   const p=pt.matrixTransform(svgEl.getScreenCTM().inverse());
+   start={x:p.x,y:p.y};
+   const tr=g.getAttribute('transform')||'';
+   const mt=tr.match(/translate\(([-\d.]+)[ ,]([-\d.]+)\)/);
+   origin={x:mt?Number(mt[1]):0,y:mt?Number(mt[2]):0};
+   g.setPointerCapture(ev.pointerId); g.style.cursor='grabbing';
+ });
+ g.addEventListener('pointermove',ev=>{
+   if(active!==g) return;
+   const pt=svgEl.createSVGPoint(); pt.x=ev.clientX; pt.y=ev.clientY;
+   const p=pt.matrixTransform(svgEl.getScreenCTM().inverse());
+   const dx=p.x-start.x, dy=p.y-start.y;
+   if(Math.abs(dx)+Math.abs(dy)>2) moved=true;
+   g.setAttribute('transform',`translate(${origin.x+dx} ${origin.y+dy})`);
+   updateEdges();
+ });
+ function finish(ev){
+   if(active!==g) return;
+   if(!moved) showInfo(id);
+   active=null; g.style.cursor='grab';
+ }
+ g.addEventListener('pointerup',finish);
+ g.addEventListener('pointercancel',()=>{active=null; g.style.cursor='grab';});
+});
+function updateEdges(){
+ document.querySelectorAll('#edges line').forEach(line=>{
+   const a=centerOf(line.dataset.source), b=centerOf(line.dataset.target);
+   const dx=b.x-a.x,dy=b.y-a.y,len=Math.hypot(dx,dy)||1, r=27;
+   line.setAttribute('x1',a.x+dx/len*r);
+   line.setAttribute('y1',a.y+dy/len*r);
+   line.setAttribute('x2',b.x-dx/len*r);
+   line.setAttribute('y2',b.y-dy/len*r);
+ });
+ document.querySelectorAll('#edges text').forEach(label=>{
+   const a=centerOf(label.dataset.source), b=centerOf(label.dataset.target);
+   label.setAttribute('x',(a.x+b.x)/2);
+   label.setAttribute('y',(a.y+b.y)/2-5);
+ });
+}
+</script></body></html>
